@@ -1,0 +1,11 @@
+.result {
+    padding: 1rem;
+    border: 1px solid grey;
+    margin: 1rem;
+}
+
+.image {
+    height: 100px;
+    background-size: cover;
+    background-position: center top;
+}
