@@ -1,10 +1,10 @@
 const container = document.querySelector(".container");
 
 
-const url = "https://www.superheroapi.com/api.php/1214716615946231/69";
+const url = "https://www.superheroapi.com/api.php/1214716615946231/";
 
-async function callApi() {
-    const response = await fetch(url);
+async function callApi(id) {
+    const response = await fetch(url+id);
     const json = await response.json();
 
     console.log(json);
@@ -13,7 +13,7 @@ async function callApi() {
                             <div class="details-image" style="background-image: url('${json.image.url}')"></div>    
                             <div class="description">${json.appearance.gender}</div>`                 
 }
-   
 
-
-callApi();
+callApi(69);
+callApi(720);
+callApi(346)
