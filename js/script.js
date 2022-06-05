@@ -10,8 +10,8 @@ async function callApi() {
     console.log(json);
 
     container.innerHTML = `<h1>${json.name}</h1>
-                            <div class="details-image" style="background-image: url('${json.image}')"></div>    
-                            <div class="description">${json.appearance}</div>`                 
+                            <div class="details-image" style="background-image: url('${json.image.url}')"></div>    
+                            <div class="description">${json.appearance.gender}</div>`                 
 }
    
 
