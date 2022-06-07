@@ -9,11 +9,11 @@ async function callApi(id) {
 
     console.log(json);
 
-    container.innerHTML = `<h1>${json.name}</h1>
-                            <div class="details-image" style="background-image: url('${json.image.url}')"></div>    
-                            <div class="description">${json.appearance.gender}</div>`                 
+    container.innerHTML += `<div class="hero-intro"><h3>${json.name}</h3>
+                            <img src="${json.image.url}" alt="image of superhero"></img></div>`         
 }
 
 callApi(69);
 callApi(720);
-callApi(346)
+callApi(346);
+

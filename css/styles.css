@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-intro {
+    margin: 50px auto;
+}
+
+.hero-intro:hover {
+    cursor: pointer;
+}
+
+img {
+    max-width: 300px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin: 3 0 3 0;
+}
