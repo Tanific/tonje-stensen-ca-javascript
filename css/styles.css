@@ -1,26 +1,17 @@
-main {
+.hero {
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.hero-intro {
-    margin: 50px auto;
-}
-
-.hero-intro:hover {
-    cursor: pointer;
-}
-
-img {
-    max-width: 300px;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-h3 {
-    margin: 3 0 3 0;
+.hero img {
+    max-width: 100px;
+    width: 100%;
 }

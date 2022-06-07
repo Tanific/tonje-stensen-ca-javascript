@@ -1,19 +1,26 @@
 const container = document.querySelector(".container");
 
 
-const url = "https://www.superheroapi.com/api.php/1214716615946231/";
+const url = "https://www.superheroapi.com/api.php/1214716615946231/search/man";
 
-async function callApi(id) {
-    const response = await fetch(url+id);
+async function callApi() {
+    const response = await fetch(url);
     const json = await response.json();
 
     console.log(json);
 
-    container.innerHTML += `<a href="details.html?id=${json.id}" class="hero-intro"><h3>${json.name}</h3>
-                            <img src="${json.image.url}" alt="image of superhero"></img></a>`         
+    const results = json.results
+
+    results.forEach(function (result) {
+        container.innerHTML += `<a href="details.html?id=${json.results.id}"<div class="hero">
+        <h4>${result.name}</h4>
+        <img src="${result.image.url}" />
+        </div></a>`;
+    })
+
+
 }
 
-callApi(69);
-callApi(720);
-callApi(346);
+callApi();
+
 
