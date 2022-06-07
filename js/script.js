@@ -12,12 +12,11 @@ async function callApi() {
     const results = json.results
 
     results.forEach(function (result) {
-        container.innerHTML += `<a href="details.html?id=${json.results.id}"<div class="hero">
+        container.innerHTML += `<a href="details.html?id=${result.id}"<div class="hero">
         <h4>${result.name}</h4>
         <img src="${result.image.url}" />
         </div></a>`;
     })
-
 
 }
 

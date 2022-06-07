@@ -25,5 +25,16 @@ async function fetchHero() {
 fetchHero();
 
 function createHTML(details) {
-    detailWrapper.innerHTML = `<h1>${details.name}<h1>`
+    detailWrapper.innerHTML = `<div class="hero-info"><h1>${details.name}<h1>
+    <h3>Powerstats:</h3>
+    <p>Intelligence: ${details.powerstats.intelligence}</p>
+    <p>Strength: ${details.powerstats.strength}</p>
+    <p>Speed: ${details.powerstats.speed}</p>
+    <h4>Alignment: ${details.biography.alignment}</h4>
+    <h4>Occupation: ${details.work.occupation}</h4>
+    <h4>Race: ${details.appearance.race}</h4>
+    </div>
+    <div><img src="${details.image.url}" /></div>`
+    
+    
 }
