@@ -9,17 +9,27 @@ const id = params.get("id");
 console.log(id);
 
 
-const url = "https://www.superheroapi.com/api.php/1214716615946231/" + id;
+const url = "https://akabab.github.io/superhero-api/api/id/" + id + ".json";
 
 console.log(url)
 
 async function fetchHero() {
-    const response = await fetch(url);
-    const details = await response.json();
+    
+    try {
+        const response = await fetch(url);
+        
+        const details = await response.json();
 
-    console.log(details);
+        console.log(details);
 
-    createHTML(details);
+        createHTML(details);
+
+    }
+    catch(error) {
+        console.log(error);
+        detailWrapper.innerHTML = message("error", error);
+    }
+
 }
 
 fetchHero();
@@ -34,6 +44,6 @@ function createHTML(details) {
     <h4>Occupation: ${details.work.occupation}</h4>
     <h4>Race: ${details.appearance.race}</h4>
     </div>
-    <div><img src="${details.image.url}" /></div>`
+    <div><img src="${details.images.md}" /></div>`
     
 }

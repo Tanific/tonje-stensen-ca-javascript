@@ -1,22 +1,31 @@
 const container = document.querySelector(".container");
 
 
-const url = "https://www.superheroapi.com/api.php/1214716615946231/search/man";
+const url = "https://akabab.github.io/superhero-api/api/all.json";
 
 async function callApi() {
-    const response = await fetch(url);
-    const json = await response.json();
 
-    console.log(json);
+    try {
+        const response = await fetch(url);
+        const results = await response.json();
 
-    const results = json.results
+        console.log(results);
 
-    results.forEach(function (result) {
-        container.innerHTML += `<a href="details.html?id=${result.id}"<div class="hero">
-        <h4>${result.name}</h4>
-        <img src="${result.image.url}" />
-        </div></a>`;
-    })
+        container.innerHTML = "";
+
+        for(let i = 0; i < results.length; i++) {
+
+            container.innerHTML += `<a href="details.html?id=${results[i].id}"<div class="hero">
+            <h4>${results[i].name}</h4>
+            <img src="${results[i].images.md}" />
+            </div></a>`;
+        }
+
+    }
+    catch (error) {
+        console.log(error);
+        container.innerHTML = message("error", error);
+    }
 
 }
 

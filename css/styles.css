@@ -15,3 +15,32 @@
     max-width: 100px;
     width: 100%;
 }
+
+
+.error {
+    border: 1px solid var(--primary-colour);
+    color: var(--primary-colour);
+    background: var(--light-grey);
+    padding: 1em;
+}
+
+
+.error:after {
+    content: "An error occurred.";
+}
+
+
+.loader {
+    border: 5px solid rgb(234, 234, 234);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-top-color: rgba(13, 13, 13, 0.5);
+    animation: rotate calc(1s) linear infinite;
+}
+  
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
