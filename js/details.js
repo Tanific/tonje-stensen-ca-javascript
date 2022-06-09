@@ -36,5 +36,4 @@ function createHTML(details) {
     </div>
     <div><img src="${details.image.url}" /></div>`
     
-    
 }
