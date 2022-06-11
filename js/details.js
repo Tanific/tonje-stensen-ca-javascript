@@ -13,6 +13,7 @@ const url = "https://akabab.github.io/superhero-api/api/id/" + id + ".json";
 
 console.log(url)
 
+
 async function fetchHero() {
     
     try {
