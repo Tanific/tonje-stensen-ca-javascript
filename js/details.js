@@ -45,6 +45,6 @@ function createHTML(details) {
     <h4>Occupation: ${details.work.occupation}</h4>
     <h4>Race: ${details.appearance.race}</h4>
     </div>
-    <div><img src="${details.images.md}" /></div>`
-    
+    <div><img src="${details.images.md}" /></div>;
+    <title>${details.name}</title>`
 }
