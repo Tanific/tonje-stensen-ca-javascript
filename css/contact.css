@@ -30,6 +30,10 @@ h1 {
     align-items: flex-start;
 }
 
+#wrapper-contactForm div {
+    min-width: 550px;
+}
+
 
 label {
     display: block;
